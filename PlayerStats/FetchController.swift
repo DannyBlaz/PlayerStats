@@ -20,26 +20,24 @@ struct FetchController {
     private let baseURL = NSMutableURLRequest(url: NSURL(string: "https://api-football-v1.p.rapidapi.com/v3/players/squads?team=541")! as URL,
                                               cachePolicy: .useProtocolCachePolicy,
                                               timeoutInterval: 10.0)
-    func fetchTeam(completionHandler: @escaping ([Team]) -> Void) {
+    func fetchTeam(from team: String) async throws -> Team {
         
         baseURL.httpMethod = "GET"
         baseURL.allHTTPHeaderFields = headers
         
-        let task = URLSession.shared.dataTask(with: baseURL, completionHandler: { (data, response, error) in
-            if let error = error {
-                print("Error with fetching Team: \(error)")
-                return
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {
-                print("Error with the response, unexpected status code: \(response)")
-                return
-            }
-            
-            let team = try JSONDecoder().decode(Team.self, from: data){
-                completionHandler(team ?? [])
-            }
-        })
+        guard let fetchURL = baseURL.url else{
+            throw NetworkError.badURL
+        }
+        
+        let (data, response) = try await URLSession.shared.data(from: fetchURL)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw NetworkError.badResponse
+        }
+        
+        let team = try JSONDecoder().decode(Team.self, from: data)
+        
+        return team
     }
+    
 }
