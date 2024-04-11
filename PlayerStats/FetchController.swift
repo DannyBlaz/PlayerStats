@@ -26,7 +26,7 @@ struct FetchController {
                                               timeoutInterval: 10.0)
     
     // Fetch Team
-    func fetchTeam(from team: String) async throws -> Team {
+    func fetchTeam() async throws -> Team {
         
         teamURL.httpMethod = "GET"
         teamURL.allHTTPHeaderFields = headers
@@ -50,7 +50,7 @@ struct FetchController {
     }
     
     // Fetch Player
-    func fetchPlayer(from player: String) async throws -> Player {
+    func fetchPlayer() async throws -> Player {
         
         playerURL.httpMethod = "GET"
         playerURL.allHTTPHeaderFields = headers

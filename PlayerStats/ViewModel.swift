@@ -24,13 +24,13 @@ class ViewModel: ObservableObject {
         self.controller = controller
     }
     
-    func getData(for show:String) async {
+    func getData() async {
         status = .fetching
         
         do {
-            let player = try await controller.fetchPlayer(from: show)
+            let player = try await controller.fetchPlayer()
             
-            let team = try await controller.fetchTeam(from: <#T##String#>)/*(quote.character)*/
+            let team = try await controller.fetchTeam()
             
             status = .success(data: (player, team))
         } catch {
