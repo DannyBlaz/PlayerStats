@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B6D31672BC7AB390032171B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D31662BC7AB390032171B /* ViewModel.swift */; };
 		7B6D31692BCE46840032171B /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D31682BCE46840032171B /* TeamView.swift */; };
+		7B6D316D2BCE52B40032171B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D316C2BCE52B40032171B /* Credentials.swift */; };
 		7B6DABC12BB26A43006FE376 /* PlayerStatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DABC02BB26A43006FE376 /* PlayerStatsApp.swift */; };
 		7B6DABC32BB26A43006FE376 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DABC22BB26A43006FE376 /* ContentView.swift */; };
 		7B6DABC52BB26A45006FE376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6DABC42BB26A45006FE376 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		7B6D31662BC7AB390032171B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7B6D31682BCE46840032171B /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		7B6D316C2BCE52B40032171B /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		7B6DABBD2BB26A43006FE376 /* PlayerStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B6DABC02BB26A43006FE376 /* PlayerStatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsApp.swift; sourceTree = "<group>"; };
 		7B6DABC22BB26A43006FE376 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				7B6DABD22BBD2CA5006FE376 /* Team.swift */,
 				7B6DABD02BBBBF7A006FE376 /* FetchController.swift */,
 				7B6DABCE2BB506DE006FE376 /* Player.swift */,
+				7B6D316C2BCE52B40032171B /* Credentials.swift */,
 				7B6DABC42BB26A45006FE376 /* Assets.xcassets */,
 				7B6DABC62BB26A45006FE376 /* Preview Content */,
 			);
@@ -154,6 +157,7 @@
 			files = (
 				7B6DABC32BB26A43006FE376 /* ContentView.swift in Sources */,
 				7B6DABCF2BB506DE006FE376 /* Player.swift in Sources */,
+				7B6D316D2BCE52B40032171B /* Credentials.swift in Sources */,
 				7B6DABC12BB26A43006FE376 /* PlayerStatsApp.swift in Sources */,
 				7B6DABD32BBD2CA5006FE376 /* Team.swift in Sources */,
 				7B6D31672BC7AB390032171B /* ViewModel.swift in Sources */,
