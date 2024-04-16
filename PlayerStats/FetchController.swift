@@ -13,8 +13,8 @@ struct FetchController {
     }
     
     private let headers = [
-        "X-RapidAPI-Key": "2c76bf1d31msh4251560b9c0cc5ap1b7448jsnc65817844fc7",
-        "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
+        "X-RapidAPI-Key": Constants.apiKey,
+        "X-RapidAPI-Host": Constants.apiHost
     ]
     
     private let playerURL = NSMutableURLRequest(url: NSURL(string: "https://api-football-v1.p.rapidapi.com/v3/players?id=129718&season=2020")! as URL,
