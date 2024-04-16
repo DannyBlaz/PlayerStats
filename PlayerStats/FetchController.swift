@@ -11,7 +11,7 @@ struct FetchController {
     enum NetworkError: Error {
         case badURL, badResponse
     }
-    
+        
     private let headers = [
         "X-RapidAPI-Key": Constants.apiKey,
         "X-RapidAPI-Host": Constants.apiHost
